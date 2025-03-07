@@ -17,14 +17,16 @@ video {
 
 .head, .story1, .story2, .story3, .story4, .story5, .story6 {
     width: 100%;
-    height: 100vh; /* 让所有元素填满屏幕 */
+    height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 video, img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 确保填充整个区域 */
+    object-fit: cover; 
 }
+
