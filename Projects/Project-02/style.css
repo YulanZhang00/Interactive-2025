@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -11,50 +10,42 @@ html, body {
     overflow-y: scroll;
 }
 
-
-.head,.story{
+.head, .story {
     scroll-snap-align: start; 
-}
-
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-}
-
-
-.head {
-    position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-}
-
-
-video {
     position: relative;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    pointer-events: none;
-    
 }
-
-
-
 
 
 .story {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.story1 { background-image: url('https://yulanzhang00.github.io/Interactive-2025/Projects/Project-02/heiwukong/pic1.jpg'); }
+.story2 { background-image: url('https://yulanzhang00.github.io/Interactive-2025/Projects/Project-02/heiwukong/huangfeng.jpg'); }
+.story3 { background-image: url('https://yulanzhang00.github.io/Interactive-2025/Projects/Project-02/heiwukong/huangmei.jpg'); }
+.story4 { background-image: url('https://yulanzhang00.github.io/Interactive-2025/Projects/Project-02/heiwukong/qianmu.jpg'); }
+.story5 { background-image: url('https://yulanzhang00.github.io/Interactive-2025/Projects/Project-02/heiwukong/niumowang.jpg'); }
+.story6 { background-image: url('https://yulanzhang00.github.io/Interactive-2025/Projects/Project-02/heiwukong/weijing.jpg'); }
+
+
+.story::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.7) 80%);
+    z-index: 1;
 }
 
 
@@ -62,49 +53,64 @@ video {
     position: relative;
     width: 100%;
     height: 100%;
+    z-index: 2;
 }
-
-
-.media-container img {
-
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
-
 
 .overlay-video {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 35%;
     transform: translate(-50%, -50%);
     width: 50%;
     height: 50%;
     border: none;
 }
 
-
-.homelogo{
+.homelogo {
     position: absolute;
     width: 40%;
     height: 40%;
     top: 20%;
     left: 55%;
-    border: none;
     object-fit: contain;
-    
 }
 
-
 @media print {
-    
     .head, .overlay-video {
         display: none; 
     }
-
-    
     .story {
         page-break-before: always; 
     }
+}
+
+
+.word {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 20vw; 
+    height: auto; 
+    max-width: 600px;  
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.title {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 1vh;
+    text-align: center;
+    align-self: center;
+}
+
+.content {
+    font-size: 1.2em;
+    color: white;
+    text-align:left;
 }
