@@ -76,9 +76,7 @@ html, body {
 }
 
 @media print {
-    .head, .overlay-video {
-        display: none; 
-    }
+   
     .story {
         page-break-before: always; 
     }
@@ -114,3 +112,4 @@ html, body {
     color: white;
     text-align:left;
 }
+
