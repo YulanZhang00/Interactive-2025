@@ -20,6 +20,14 @@ html, body {
     position: relative;
 }
 
+.head { 
+
+    background-image: url('https://yulanzhang00.github.io/Interactive-2025/Projects/Project-02/heiwukong/headimg.png'); }
+
+
+.homelogo{
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
 
 .story {
     background-size: cover;
@@ -66,6 +74,18 @@ html, body {
     border: none;
 }
 
+@keyframes breathe {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .homelogo {
     position: absolute;
     width: 40%;
@@ -73,8 +93,9 @@ html, body {
     top: 20%;
     left: 55%;
     object-fit: contain;
+    
+    animation: breathe 3s ease-in-out infinite;
 }
-
 
 .word {
     position: absolute;
@@ -87,21 +108,44 @@ html, body {
     width: 20vw; 
     height: auto; 
     max-width: 600px;  
-    background-color: rgba(0, 0, 0, 0.6); 
+   
     padding: 15px;
     border-radius: 5px;
-    
+ 
+    animation: breathe1 3s ease-in-out infinite;
     
 }
 
-.word:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-    transform: scale(1.25) translateY(-40%);
-    transition-delay: 0.2s ease-out;
+@keyframes breathe1 {
+    0% {
+        transform: translateY(-50%);
+    }
+    50% {
+        transform: translateY(-55%);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
 }
+.word {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(50px); 
+    opacity: 0; 
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+
+.story:hover .word,
+.story:focus-within .word {
+    transform: translateY(0); 
+    opacity: 1;
+}
+
 
 .title {
-    font-size: 2.5em;
+    font-size: 4em;
     color: #b5b4b2;
     margin-bottom: 1vh;
     text-align: center;
@@ -110,7 +154,7 @@ html, body {
 }
 
 .content {
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: #b5b4b2;
     text-align:left;
     padding: 10px;
@@ -121,12 +165,26 @@ html, body {
     
     video,
     iframe,
-    .overlay-video,
-    .homelogo {
+    .overlay-video {
         display: none !important;
     }
 
-    /* 打印背景图像 */
+
+    .head {
+        display: flex !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        background-image: url('https://yulanzhang00.github.io/Interactive-2025/Projects/Project-02/heiwukong/headimg.png') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+
+    }
+    
+    
+
     .story {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
@@ -138,12 +196,12 @@ html, body {
         height: 100vh;
     }
 
-    /* 覆盖遮罩（暗角）去掉，让背景图清晰 */
+    
     .story::before {
         display: none !important;
     }
 
-    /* 保留文字部分，优化打印样式 */
+    
     .word {
         background: rgba(255, 255, 255, 0.85) !important;
         color: black !important;
@@ -154,6 +212,7 @@ html, body {
         width: auto !important;
         padding: 20px !important;
         margin: 30px auto !important;
+        
     }
 
     .title {
@@ -168,7 +227,7 @@ html, body {
         text-align: justify;
     }
 
-    /* 避免其他部分影响版式 */
+   
     body, html {
         background: white !important;
         overflow: visible !important;
