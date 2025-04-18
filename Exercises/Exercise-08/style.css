@@ -2,7 +2,6 @@
 
 body {
 
-}
 
 /* Text
 -------------------------------------------------- */
@@ -19,7 +18,12 @@ body {
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
 
   /* text */
-
+  .img{
+   width: 700px;
+   height: 700px;
+   background-image:url('https://github.com/YulanZhang00/Interactive-2025/blob/main/Exercises/Exercise-08/img1.jpg');
+   background-position: center;
+  }
 
   /* image */
 
@@ -31,7 +35,12 @@ body {
 @media screen and (max-width: 768px) {
 
   /* text */
-
+  .img{
+    width: 700px;
+    height: 700px;
+    background-image:url('https://github.com/YulanZhang00/Interactive-2025/blob/main/Exercises/Exercise-08/img1.jpg');
+    background-position: center;
+   }
   /* image */
 
 }
@@ -43,9 +52,15 @@ body {
 @media (orientation: landscape) {
 
   /* text */
-
+  .img{
+    width: 700px;
+    height: 700px;
+    background-image:url('https://github.com/YulanZhang00/Interactive-2025/blob/main/Exercises/Exercise-08/img1.jpg');
+    background-position: center;
+   }
   /* image */
 
 }
 
 
+}
