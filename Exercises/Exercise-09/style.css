@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.calendar {
+    width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.weekdays, .dates {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.weekdays div, .dates div {
+    width: 14.28%;
+    text-align: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.dates div {
+    border: 1px solid #ddd;
+    margin: -1px 0 0 -1px;
+}
