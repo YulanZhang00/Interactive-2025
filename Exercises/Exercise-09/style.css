@@ -59,7 +59,3 @@ body {
     align-items: center;
 }
 
-.dates div:hover {
-    background-color: #f5f5f5;
-    cursor: pointer;
-}
