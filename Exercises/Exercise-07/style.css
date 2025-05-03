@@ -1,3 +1,31 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #DADADA;
+}
+
+
+/* if you want to change the background of your canvas, do it here */
+
+.canvas {
+	width: 900px;
+	height: 556px;
+	margin: auto;
+	background: white;
+	position: relative;
+	border: solid black 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* this is where you can style the objects in your still life */
+
+
+
 body {
     background: #f0f0f0;
     display: flex;
@@ -22,17 +50,19 @@ body {
     position: absolute;
     top: -30px;
     border-radius: 50%;
-    z-index: -1;
+    
 }
   
 .ear.left {
     left: -30px;
     transform: rotate(-20deg);
+    position: absolute;
 }
   
 .ear.right {
     right: -30px;
     transform: rotate(20deg);
+    position: absolute;
 }
   
 .eye {
@@ -80,6 +110,7 @@ body {
   
 .nose {
     width: 30px;
+    
     height: 20px;
     background: black;
     border-radius: 50% / 40%;
