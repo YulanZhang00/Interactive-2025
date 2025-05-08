@@ -21,112 +21,62 @@ body {
 	align-items: center;
 }
 
-
-/* this is where you can style the objects in your still life */
-
-
-
-body {
-    background: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
   
-.face {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    background: #fff8e7;
-    border-radius: 50%;
-    box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
-}
-  
-.ear {
-    width: 80px;
-    height: 100px;
-    background: #000000;
+  /* 花瓶脖子 */
+  .vase-neck {
     position: absolute;
-    top: -30px;
-    border-radius: 50%;
-    
-}
-  
-.ear.left {
-    left: -30px;
-    transform: rotate(-20deg);
-    position: absolute;
-}
-  
-.ear.right {
-    right: -30px;
-    transform: rotate(20deg);
-    position: absolute;
-}
-  
-.eye {
-    width: 80px;
-    height: 80px;
-    background: white;
-    border: 10px solid #333;
-    border-radius: 50%;
-    position: absolute;
-    top: 70px;
-    overflow: hidden;
-    box-shadow: inset 0 0 8px #aaa;
-}
-  
-.eye.left {
-    left: 50px;
-}
-  
-.eye.right {
-    right: 50px;
-}
-  
-.orbit {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    animation: rotate 4s linear infinite;
-    transform-origin: center center;
-}
-  
-.pupil {
-    width: 20px;
-    height: 20px;
-    background: black;
-    border-radius: 50%;
-    position: absolute;
-    top: 10px;
-    left: 30px;
-}
-  
-@keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-  
-.nose {
+    left: 120px;
+    bottom: 120px;
     width: 30px;
-    
-    height: 20px;
-    background: black;
-    border-radius: 50% / 40%;
-    position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-}
+    height: 60px;
+    background: #b0c4de;
+    border-radius: 15px 15px 10px 10px;
+    z-index: 2;
+  }
   
-.mouth {
+  /* 花瓶主体 */
+  .vase-body {
     position: absolute;
+    left: 100px;
+    bottom: 40px;
+    width: 70px;
+    height: 100px;
+    background: #b0c4de;
+    border-radius: 35px 35px 40px 40px;
+    z-index: 1;
+  }
+  
+  /* 花茎 */
+  .flower-stem {
+    position: absolute;
+    left: 134px;
+    bottom: 180px;
+    width: 4px;
+    height: 60px;
+    background: #228b22;
+    z-index: 3;
+  }
+  
+  /* 花朵 */
+  .flower-head {
+    position: absolute;
+    left: 125px;
+    bottom: 235px;
+    width: 22px;
+    height: 22px;
+    background: #ff69b4;
+    border-radius: 50%;
+    z-index: 4;
+  }
+  
+  /* 书本 */
+  .book {
+    position: absolute;
+    left: 220px;
     bottom: 60px;
-    left: 50%;
-    width: 60px;
-    height: 40px;
-    border-bottom: 3px solid #333;
-    border-radius: 0 0 50% 50%;
-    transform: translateX(-50%);
-}
+    width: 80px;
+    height: 30px;
+    background: #deb887;
+    border: 2px solid #8b5c2a;
+    z-index: 2;
+  }
