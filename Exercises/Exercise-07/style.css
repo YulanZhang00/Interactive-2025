@@ -1,89 +1,131 @@
-/* if you want to change the background of your canvas, do it here */
-
 .canvas {
-	width: 900px;
-	height: 556px;
-	margin: auto;
-	background: white;
-	position: relative;
-	border: solid black 5px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  width: 900px;
+  height: 556px;
+  margin: auto;
+  background: white;
+  position: relative;
+  border: solid black 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-  
-  /* 花瓶脖子 */
-  .vase-neck {
-    position: absolute;
-    left: 120px;
-    bottom: 120px;
-    width: 30px;
-    height: 60px;
-    background: #b0c4de;
-    border-radius: 15px 15px 10px 10px;
-    z-index: 2;
-  }
-  
-  /* 花瓶主体 */
-  .vase-body {
-    position: absolute;
-    left: 100px;
-    bottom: 40px;
-    width: 70px;
-    height: 100px;
-    background: #b0c4de;
-    border-radius: 35px 35px 40px 40px;
-    z-index: 1;
-  }
-  
-  /* 花和花茎的容器 */
-  .flower {
-    position: absolute;
-    left: 134px;
-    bottom: 180px;
-    transform-origin: bottom center;
-    animation: sway 3s ease-in-out infinite;
-    z-index: 3;
-  }
-  
-  /* 花茎 */
-  .flower-stem {
-    position: relative;
-    width: 4px;
-    height: 60px;
-    background: #228b22;
-    margin: 0 auto;
-  }
-  
-  /* 花朵 */
-  .flower-head {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 55px;
-    width: 22px;
-    height: 22px;
-    background: #ff69b4;
-    border-radius: 50%;
-    z-index: 4;
-  }
-  
-  /* 书本 */
-  .book {
-    position: absolute;
-    left: 220px;
-    bottom: 60px;
-    width: 80px;
-    height: 30px;
-    background: #deb887;
-    border: 2px solid #8b5c2a;
-    z-index: 2;
-  }
+
+/* 花瓶 */
+.vase-neck {
+  position: absolute;
+  left: 120px;
+  bottom: 120px;
+  width: 30px;
+  height: 60px;
+  background: #b0c4de;
+  border-radius: 15px 15px 10px 10px;
+  z-index: 2;
+}
+
+.vase-body {
+  position: absolute;
+  left: 100px;
+  bottom: 40px;
+  width: 70px;
+  height: 100px;
+  background: #b0c4de;
+  border-radius: 35px 35px 40px 40px;
+  z-index: 1;
+}
+
+/* 花 */
+.flower {
+  position: absolute;
+  /* 对齐到花瓶颈口中心 */
+  left: 100px;
+  bottom: 100px;
+  transform-origin: bottom center;
+  animation: sway 3s ease-in-out infinite;
+  z-index: 3;
+}
+
+.flower-stem {
+  position: relative;
+  width: 4px;
+  height: 60px;
+  background: #228b22;
+  margin: 0 auto;
+}
+
+.flower-head {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 55px;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  z-index: 4;
+}
+
+/* 花瓣基础样式 */
+.petal {
+  width: 45px;
+  height: 45px;
+  background: #ff69b4;
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* 随机偏移和旋转，不再等分圆周 */
+.petal:nth-child(1) {
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(8deg);
+  opacity: 0.85;
+}
+.petal:nth-child(2) {
+  top: 15px;
+  left: 80%;
+  transform: translate(-50%, -50%) rotate(65deg);
+  opacity: 0.9;
+}
+.petal:nth-child(3) {
+  top: 55%;
+  left: 90%;
+  transform: translate(-50%, -50%) rotate(120deg);
+  opacity: 0.7;
+}
+.petal:nth-child(4) {
+  bottom: 5px;
+  left: 55%;
+  transform: translate(-50%, 50%) rotate(200deg);
+  opacity: 0.8;
+}
+.petal:nth-child(5) {
+  bottom: 20px;
+  left: 20%;
+  transform: translate(-50%, 50%) rotate(245deg);
+  opacity: 0.75;
+}
+.petal:nth-child(6) {
+  top: 40%;
+  left: 10%;
+  transform: translate(-50%, -50%) rotate(310deg);
+  opacity: 0.6;
+}
+
+/* 书本 */
+.book {
+  position: absolute;
+  left: 220px;
+  bottom: 60px;
+  width: 80px;
+  height: 30px;
+  background: #deb887;
+  border: 2px solid #8b5c2a;
+  z-index: 2;
+}
 
 @keyframes sway {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    50% { transform: rotate(0deg); }
-    75% { transform: rotate(-5deg); }
-    100% { transform: rotate(0deg); }
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(5deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }
